@@ -1,0 +1,387 @@
+//Varibales section
+$primary-color:#355075;
+$font-stack: 'lato', sans-serif;
+$font_type: normal;
+$margin-center: 0px auto;
+$position:center;
+$opacity: 1 !default;
+$ml: auto !default;
+$mr: auto !default;
+$mt: auto !default;
+$mb: auto !default;
+
+//mixin 
+@mixin block($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin font($font-size,$opacity){
+  font-size: $font-size;
+  opacity: $opacity;
+}
+@mixin margins($ml,$mr,$mt,$mb){
+  margin-left: $ml;
+  margin-right: $mr;
+  margin-top: $mt;
+  margin-bottom: $mb;
+}
+#section-mid-xl{
+    display: none;
+  }
+  body{
+      font-family: $font-stack;
+      font-style: $font_type;
+      font-weight: $font_type;
+      color: $primary-color;
+  }
+  .section-top{
+      margin: $margin-center;
+      @include margins($ml,$mr,40px,$mb);
+      @include block(304px, auto);
+      text-align: $position;
+  }
+  .section-top h1{
+    @include margins($ml,$mr,$mt,0px);
+    font-size: 2.5625rem;
+    font-family: "Lato"; 
+    font-weight: 300; 
+    font-style: $font_type;
+  }
+  .section-top p{
+      margin: $margin-center;
+      padding: 0px;
+      @include block(256px, auto);
+      @include margins($ml,$mr,8px,5px);
+      @include font(1.125rem,$opacity);
+      
+  }
+  .section-mid{
+    margin: $margin-center;
+    @include block(304px, auto);
+    @include margins($ml,$mr,35px,$mb);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 29px #D6E1E5;
+  }
+  .border-top-left{
+    @include block(96.3px, 1.92px);
+    background: #FFB54E;
+  }
+  .content-box{
+    margin: 6.92px 8px 9px 8.94px;
+    height: auto;
+  }
+  .panel-top__image{
+    background: url(../images2/image2.png);
+    @include block(286.06px, 239.08px);
+    background-position: $position;
+    background-size: cover;
+  }
+  .panel-top__content{
+    padding-top: 20.08px;
+    
+  }
+  .logo{
+    @include block(142px, 71.74px);
+    background: url(../images2/Artboard.png);
+    background-repeat: no-repeat;
+    margin: $margin-center;
+  }
+  .description{
+    @include block(259px, 87px);
+    @include font(0.875rem,0.87);
+    padding-top: 14.26px;
+    padding-left: 13.06px;
+    text-align: $position;
+    color: #fff;
+    line-height: 154%;
+  }
+  .panel-mid{
+    @include margins($ml,$mr,-30px,$mb);
+  }
+  .client-image{
+    background: url(../images/image2.png);
+    background-repeat: no-repeat;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    @include block(60px, 60px);
+    margin: $margin-center;
+  }
+  .client{
+    margin-top: 17px;
+  }
+  .client__name{
+    font-weight: bold;
+    font-size: 1rem;
+    @include block(108px, 22px);
+    line-height: 133.2%;
+    margin: $margin-center;
+    text-align: $position;
+  }
+  .client__designation{
+    @include block(140px, 33px);
+    @include font(0.75rem,0.7);
+    text-align: $position;
+    margin: $margin-center;
+  }
+  .panel-bottom{
+    @include block(267px, auto);
+    margin: $margin-center;
+  }
+  .client-comment{
+    @include block(267px, auto);
+    @include font(1rem,0.87);
+    @include margins($ml,$mr,25px,40px);
+    text-align: $position;
+    line-height: 156%;
+  }
+  .slide-buttons{
+    @include block(89PX, auto);
+    margin: $margin-center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  .slide-buttons svg{
+    font-size: 18px;
+    padding-left: 16px;
+  }
+  
+  /* Media Query starts */
+  /* Media Query for 450px width devices */
+  @media screen and (min-width: 450px) {
+    .section-top{
+      @include block(384px, auto);
+    }
+    .section-top p {
+        @include block(384px, auto);
+    }
+    .section-mid{
+      margin-top: 36px;
+      @include block(410px, auto);
+    }
+    .panel-top__image{
+     @include block(391px, 220px);
+    }
+    .description {
+      @include block(321px, auto);
+      padding-top: 18.26px;
+      padding-left: 0px;
+      margin: $margin-center;
+    }
+    .panel-mid{
+      margin-top: -33px;
+    }
+    .client {
+      margin-top: 14.73px;
+    }
+    .client__name {
+      font-weight: 900;
+      @include block(108px, auto);
+      line-height: 21px;
+    }
+    .client__designation {
+      @include block(273px, 17px);
+    }
+    .panel-bottom{
+      @include block(370px, auto);
+    }
+    .client-comment {
+      @include block(370px, auto);
+      font-size: 1.25rem;
+      @include margins($ml,$mr,24px,42px);
+      line-height: 174%;
+    }
+    .slide-buttons{
+      padding-top: 32px;
+    }
+    .slide-buttons svg{
+      font-size: 18.25px;
+    }
+  }
+  /* Media Query for 500px width devices */
+  @media screen and (min-width: 500px) {
+    .section-top h1 {
+      @include block(211px, auto);
+      margin: $margin-center;
+    }
+    .section-top p {
+      @include block(387px, auto);
+    }
+    .panel-top__content{
+      padding-top: 21px;
+    }
+    .section-mid {
+      @include block(460px, auto);
+    }
+    .content-box {
+      height: auto;
+      margin: 8px 9px 9px 10px;
+    }
+    .panel-top__image {
+      @include block(441px, 220.88px);
+    }
+    .description {
+      @include block(321px, auto);
+    }
+    .client__designation{
+      line-height: 16px;
+    }
+    .client-comment {
+      @include block(422px, auto);
+    }
+    .panel-bottom {
+      @include block(422px, auto);
+    } 
+  }
+  /* Media Query for 650px width devices */
+  @media screen and (min-width: 650px) {
+    .section-mid{
+      @include block(570px, auto);
+    }
+    .content-box{
+      margin: 8px 9px 9px 10.25px;
+    }
+    .panel-top__image {
+      @include block(550px, 220px);
+      background: url(../images2/image2.png);
+    }
+    .panel-mid {
+      margin-top: -34px;
+    }
+    .description {
+      @include block(505px, auto);
+      font-size: 0.875rem;
+    }
+    .client-comment {
+      @include block(491px, auto);
+      font-size: 1.125rem;
+    }
+    .slide-buttons {
+      padding-top: 31.54px;
+      @include block(104px, auto);
+    }
+    .slide-buttons svg {
+      font-size: 21.78px;
+      padding-left: 19.08px;
+    }
+    .panel-bottom {
+      @include block(529px, auto);
+    }
+   .client-comment {
+    @include block(529px, auto);
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    }
+  }
+  /* Media Query for 1050px width devices */
+  @media screen and (min-width: 1050px) {
+   #section-mid-small{
+     display: none;
+   }
+   #section-mid-xl{
+    display: flex;
+  }
+  .section-mid {
+    @include block(970px, auto);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-sizing: border-box; 
+  }
+   .content-box{
+     display: flex;
+   }
+   .panel-top__image{
+    background: url(../images2/image2.png);
+    @include block(359.19px, 443px);
+    }
+    .content-text{
+     @include margins(49px,28px,49px,$mb);
+    }
+    .client-image{
+      @include margins(326.19px,$mr,36px,$mb);
+    }
+    .client{
+      @include block(103px, auto);
+      margin-top: 0px;
+    }
+    .client-comment{
+      text-align: initial;
+      margin-bottom: 33px;
+    }
+    .logo{
+      margin-top: 23.73px;
+    }
+    .description{
+      @include block(231px, auto);
+    }
+    /* -------------------- for slides only ---------------------- */
+    #slide_theme
+    {
+      background: url(../images/image5.png);
+      @include block(360px, 335px);
+    }
+    #space_adj{
+      @include margins(58px,$mr,46px,$mb);
+    }
+    #height_adj{
+      height: 335px;
+    }
+    #img_adj{
+      margin-top: 32px;
+    }
+    #logo_adj{
+      margin: 0px;
+      @include margins(45px,$mr,-8px,$mb);
+      background: url(../images/Bitmap.png);
+      @include block(150px, 51px);
+    }
+    #text_adj{
+      @include block(278px, auto);
+      margin-left: 45px;
+      text-align: unset;
+      font-size: 1rem;
+      padding-top: 16.17px;
+    }
+  
+    #section-mid-xl{
+     overflow: hidden;
+    }
+    .left-animate{
+      animation: slide-left 1.6s ease;
+    }
+    @keyframes slide-left {
+      0%{
+        margin-left: 100%;
+        opacity: 1;
+      }
+      100%{
+        margin-left: $margin-center;
+        opacity: 1;
+      }
+    }
+    .left-animate-end{
+      animation: left-end 1s ease;
+    }
+    @keyframes left-end {
+      0%{
+        margin-left: $margin-center;
+        opacity: 1;
+      }
+      100%{
+        margin-left: 100%;
+        opacity: 1;
+        display: none;
+      }
+    }
+    .right-animate{
+      animation: slide-right 1.6s ease;
+    }
+    @keyframes slide-right {
+      0%{
+       margin-left: -100%;
+       opacity: 1;
+      }
+      100%{
+       margin-left: $margin-center;
+      opacity: 1;
+      }
+    }
+  }
