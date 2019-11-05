@@ -344,44 +344,44 @@ $mb: auto !default;
     #section-mid-xl{
      overflow: hidden;
     }
-    .left-animate{
-      animation: slide-left 1.6s ease;
-    }
-    @keyframes slide-left {
-      0%{
-        margin-left: 100%;
-        opacity: 1;
-      }
-      100%{
-        margin-left: $margin-center;
-        opacity: 1;
-      }
-    }
-    .left-animate-end{
-      animation: left-end 1s ease;
-    }
-    @keyframes left-end {
-      0%{
-        margin-left: $margin-center;
-        opacity: 1;
-      }
-      100%{
-        margin-left: 100%;
-        opacity: 1;
-        display: none;
-      }
-    }
-    .right-animate{
-      animation: slide-right 1.6s ease;
-    }
-    @keyframes slide-right {
-      0%{
-       margin-left: -100%;
-       opacity: 1;
-      }
-      100%{
-       margin-left: $margin-center;
-      opacity: 1;
-      }
-    }
+    // .left-animate{
+    //   animation: slide-left 1.6s ease;
+    // }
+    // @keyframes slide-left {
+    //   0%{
+    //     margin-left: 100%;
+    //     opacity: 1;
+    //   }
+    //   100%{
+    //     margin-left: $margin-center;
+    //     opacity: 1;
+    //   }
+    // }
+    // .left-animate-end{
+    //   animation: left-end 1s ease;
+    // }
+    // @keyframes left-end {
+    //   0%{
+    //     margin-left: $margin-center;
+    //     opacity: 1;
+    //   }
+    //   100%{
+    //     margin-left: 100%;
+    //     opacity: 1;
+    //     display: none;
+    //   }
+    // }
+    // .right-animate{
+    //   animation: slide-right 1.6s ease;
+    // }
+    // @keyframes slide-right {
+    //   0%{
+    //    margin-left: -100%;
+    //    opacity: 1;
+    //   }
+    //   100%{
+    //    margin-left: $margin-center;
+    //   opacity: 1;
+    //   }
+    // }
   }
